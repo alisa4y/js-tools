@@ -1,0 +1,31 @@
+{
+    "name": "js-tools",
+    "version": "1.0.0",
+    "description": "some tools to give functional power and shortcuts for manipulating html",
+    "main": "src/index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alisa4y/js-tools.git"
+    },
+    "keywords": [
+        "js",
+        "tools",
+        "functional",
+        "reactive",
+        "html"
+    ],
+    "author": "ali safary",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alisa4y/js-tools/issues"
+    },
+    "homepage": "https://github.com/alisa4y/js-tools#readme",
+    "devDependencies": {
+        "typescript": "^4.3.5",
+        "tslib": "^2.3.1",
+        "ts-reflection": "^0.3.0"
+    }
+}
