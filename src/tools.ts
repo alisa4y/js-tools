@@ -9,11 +9,11 @@ export function pipe<T extends fun> (fst: T, ...fns: T[]) {
   return (...params: Parameters<T>) =>
     fns.reduce((p, fn) => fn(p), fst(...params));
 }
-export function aim<T extends fun>  (fn: T, ...args: any[]): (...args:any[])=>ReturnType<T> {
+export function aim<T extends fun>  (fn: T, ...args: any): (...args:any[])=>ReturnType<T> {
   return (...newargs: any[]) =>
     fn(...newargs, ...args);
 }
-export function curry<T extends fun>  (fn: T, ...args: any[]): (...args:any[])=>ReturnType<T> {
+export function curry<T extends fun>  (fn: T, ...args: any): (...args:any[])=>ReturnType<T> {
   return (...newargs: any[]) =>
     fn(...args, ...newargs);
 }
@@ -23,7 +23,7 @@ export function fork<T extends fun>(...fns: T[]) {
 
 export const pluck = (obj: O) => (prop: objectKeys) => obj[prop];
 
-export function guard<T extends fun>(fn: T, ...guards: T[]) {
+export function guard<T extends fun>(fn: T, ...guards: ((...p:Parameters<T>)=>boolean)[]) {
   return (...p: Parameters<T>) => guards.every((f) => f(...p)) && fn(...p);
 }
 export function pass<T extends fun>(fn: T, ...guards: T[]) {
