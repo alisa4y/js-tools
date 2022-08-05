@@ -8,6 +8,9 @@
     "test": "ava"
   },
   "author": "ali safari",
-  "license": "ISC"
-
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alisa4y/js-tools.git"
+  },
 }
