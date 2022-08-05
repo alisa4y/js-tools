@@ -1,0 +1,13 @@
+{
+  "name": "js-tools",
+  "version": "1.0.0",
+  "description": "some tools for javascript",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "ali safari",
+  "license": "ISC"
+
+}
