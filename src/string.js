@@ -1,4 +1,5 @@
 export function replaceMulti(str, rs) {
+  console.log(str)
   return Promise.all(
     rs.reduce(
       (parts, [rgx, callback]) => {
