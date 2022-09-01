@@ -53,7 +53,7 @@ export const find = (o, f) =>
   )
 export const reduce = (o, f, initialValue) => {
   let keys = oKeys(o)
-  if (!initialValue) {
+  if (initialValue === undefined) {
     initialValue = o[keys[0]]
     keys = keys.slice(1)
   }
