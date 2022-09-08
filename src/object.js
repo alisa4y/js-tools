@@ -203,3 +203,11 @@ export function converToMap(o, m = new Map()) {
   each(o, (v, k) => m.set(k, isObject(v) ? converToMap(v) : v))
   return m
 }
+export function xm(o, methodName, extension) {
+  const method = o[methodName]
+  o[methodName] = (...args) => {
+    const ret = method.apply(o, args)
+    extension(ret)
+    return ret
+  }
+}
